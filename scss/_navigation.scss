@@ -1,0 +1,47 @@
+@use "variables" as *;
+@use 'mixins' as *;
+
+
+.navbar {
+  background: $dark-gray;
+
+  .container {
+    max-width: 951px;
+  }
+
+  &-brand {
+    img {
+      width: 107px;
+    }
+  }
+
+  &-nav {
+    .nav-link {
+      color: $white;
+      font-size: 13px;
+      font-weight: 100;
+      transition: color 0.3s;
+      font-family: 'Museo Sans Cyr', sans-serif;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+
+  &-toggler {
+    border: none;
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
+
+/* === Responsive Design === */
+
+@media (max-width: 991px) {
+  .navbar {
+    min-height: 65px;
+  }
+}

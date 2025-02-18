@@ -1,0 +1,30 @@
+@use "variables" as *;
+
+
+@font-face {
+  font-family: $font-primary;
+  src: url('../assets/fonts/MuseoSansCyrl300.woff2') format('woff2'), url('../assets/fonts/MuseoSansCyrl300.woff') format('woff'),
+    url('../assets/fonts/MuseoSansCyrl300.ttf') format('truetype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: $font-primary;
+  src: url('../assets/fonts/MuseoSansCyrl500.woff2') format('woff2'), url('../assets/fonts/MuseoSansCyrl500.woff') format('woff'),
+    url('../assets/fonts/MuseoSansCyrl500.ttf') format('truetype');
+  font-weight: 500;
+}
+
+/* === Reset === */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-primary;
+  min-width: 320px;
+  background: $white;
+}
