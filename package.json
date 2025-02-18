@@ -2,9 +2,11 @@
   "name": "elearning-company",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "commonjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass --watch css/styles.scss:css/styles.css"
+    "sass": "sass --watch styles.scss:dist/styles.css",
+    "build:sass": "sass styles.scss dist/styles.css --watch"
   },
   "repository": {
     "type": "git",
@@ -13,13 +15,12 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/alinaa2501/eLearning-Company/issues"
   },
   "homepage": "https://github.com/alinaa2501/eLearning-Company#readme",
   "description": "",
   "devDependencies": {
-    "sass": "^1.84.0"
+    "sass": "^1.85.0"
   }
 }

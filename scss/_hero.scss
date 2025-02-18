@@ -1,0 +1,168 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.hero {
+  @include flex-center;
+  width: 100%;
+  background: url('../assets/images/main-section/background.svg') center/cover no-repeat;
+  height: calc(100vh - 66px);
+  max-height: calc(100svh - 66px);
+
+  &__grid {
+    @include hero-grid(4);
+    grid-auto-rows: minmax(237px, auto);
+    max-width: 950px;
+    width: 100%;
+  }
+
+  &__card {
+    @include flex-center;
+    text-align: center;
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    &-title {
+      font-size: 23.78px;
+      font-weight: 350;
+      margin: 0;
+    }
+  }
+
+  &__card--logo {
+    background: $white;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  &__card-logo {
+    width: 177px;
+  }
+
+  &__card-tagline {
+    font-size: 16.64px;
+    margin-top: 17.83px;
+    width: 129px;
+    text-align: center;
+    font-weight: 500;
+    color: $dark-gray;
+  }
+  // Background images
+  &__card--services {
+    background-image: url('../assets/images/main-section/Services.svg');
+  }
+  &__card--design {
+    background-image: url('../assets/images/main-section/Instructional-Design.svg');
+  }
+  &__card--development {
+    background-image: url('../assets/images/main-section/eLearning-Development.svg');
+  }
+  &__card--quote {
+    background-image: url('../assets/images/main-section/eLearning-Price-Quote.svg');
+  }
+  &__card--packages {
+    background-image: url('../assets/images/main-section/eLearning-Packages.svg');
+  }
+  &__card--extra {
+    background-image: url('../assets/images/main-section/notebook-img.svg');
+  }
+
+  &__card--contact {
+    background: $primary-color;
+    color: white;
+    flex-direction: column;
+  }
+
+  &__card-icon {
+    font-size: 30px;
+    margin-bottom: 12px;
+  }
+}
+
+.stripe {
+  max-width: 1175px;
+  width: 95%;
+  height: 9px;
+  background-color: $primary-color;
+  margin: 0 auto;
+}
+
+/* === Responsive Design === */
+
+@media (max-width: 991px) {
+  .hero {
+    height: calc(100svh - 74px);
+    &__grid {
+      grid-template-columns: repeat(4, 1fr);
+      max-width: 90%;
+      .hero__card-logo {
+        max-width: 130px;
+      }
+      .hero__card-title {
+        font-size: 20px;
+        font-weight: 350;
+        width: 130px;
+      }
+    }
+  }
+  .stripe {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: calc(100vh - 74px);
+    max-height: calc(100svh - 74px);
+
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+      width: 90%;
+      grid-auto-rows: 96px;
+
+      &__card--contact img {
+        height: 19px;
+        margin-bottom: 5px;
+      }
+    }
+
+    &__card--logo {
+      .hero__card-logo {
+        max-width: 150px;
+      }
+      .hero__card-tagline {
+        display: none;
+      }
+    }
+    &__card--contact img {
+      height: 19px;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+@media (max-width: 422px) {
+  .hero {
+    min-height: calc(100svh - 150px);
+
+    &__grid {
+      grid-template-columns: repeat(1, 1fr);
+      width: 90%;
+      grid-auto-rows: 60px;
+      .hero__card--extra {
+        display: none;
+      }
+    }
+  }
+
+  .stripe {
+    bottom: 60px;
+  }
+}
