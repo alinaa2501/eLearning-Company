@@ -70,6 +70,7 @@
         </div>
       </div>
     </nav>
+
     <main>
       <section class="services">
         <div class="services__container">
@@ -81,19 +82,40 @@
             <div class="services__line-circle"></div>
           </div>
           <h2 class="services__title">Services We Provide</h2>
+
           <!-- Filter Block -->
           <div class="services__filters filters">
             <div class="filters__search">
               <input type="text" class="filters__search-input" placeholder="Search" />
               <img src="assets/images/services-section/loupe.svg" alt="Search" class="filters__search-icon" />
             </div>
+
+            <!-- Type Filter -->
             <div class="filters__type">
               <span class="filters__type-text">Type</span>
-              <span class="filters__type-circle">
+
+              <!-- Main Circle Button  -->
+              <span class="filters__type-circle filters__type-trigger">
                 <img src="assets/images/services-section/black-arrow-right.svg" alt="Check" />
               </span>
+
+              <!-- Color Selection Panel (Hidden by Default) -->
+              <div class="filters__type-dropdown">
+                <div class="filters__type-options">
+                  <span class="filters__type-color filters__type-color--gray" data-color="#D9D9D9"></span>
+                  <span class="filters__type-color filters__type-color--gold" data-color="#E7D08C"></span>
+                  <span class="filters__type-color filters__type-color--teal" data-color="#3D948E"></span>
+                  <span class="filters__type-color filters__type-color--teal-outline" data-color="outline-teal"></span>
+                  <span class="filters__type-color filters__type-color--gray-outline" data-color="outline-gray"></span>
+                </div>
+
+                <button class="filters__type-close">
+                  <img src="assets/images/services-section/close.svg" alt="Close" />
+                </button>
+              </div>
             </div>
-            <div class="filters__occupation">
+
+             <div class="filters__occupation">
               <span class="filters__occupation-text">Occupation</span>
               <div class="filters__occupation-dropdown">
                 <div class="filters__occupation-background">
@@ -101,7 +123,9 @@
                 </div>
                 <img src="assets/images/services-section/arrow-down.svg" alt="Arrow" />
               </div>
-            </div>
+            </div> 
+
+
           </div>
 
           <!-- Services Block -->
@@ -171,6 +195,7 @@
               <li class="pagination__number pagination__number--active">1</li>
               <li class="pagination__number">2</li>
               <li class="pagination__number">3</li>
+              <li class="pagination__number pagination__number--hidden">4</li>
             </ul>
             <button class="pagination__button pagination__button--next">
               <img src="assets/images/services-section/arrow-right.svg" alt="Next" />
@@ -180,5 +205,9 @@
       </section>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/features/pagination.js"></script>
+    <script src="/features/filter.js"></script>
+    <script src="/features/slider.js"></script>
+    <script src="/features/chat.js"></script>
   </body>
 </html>

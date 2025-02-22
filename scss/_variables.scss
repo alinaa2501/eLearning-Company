@@ -4,15 +4,29 @@ $secondery-color: #3d948c; //button and contact-page background
 $text-color: #333;
 $dark-gray: #343434; //text with logo in hero, background navbar and line(10%), background-menu-footer
 $white: #ffffff;
-
 $gray-title: #999b9a;
 
+// === Services Section ===
 $services-text: #212121;
 $light-gray: #ebebeb;
 
 $gray-muted: #b5b7b6;
 $golden-sand: #dcce90;
 $teal-aqua: #29b4ad;
+
+// Type Filter Colors 
+$filter-color-gray: #D9D9D9; 
+$filter-color-gold: #E7D08C; 
+$filter-color-teal: #3D948E; 
+$filter-color-teal-outline: #3D948E; 
+$filter-color-gray-outline: $gray-muted; 
+// Background & Borders
+$filter-background: $light-gray; 
+$filter-border-outline-teal: 2px solid $filter-color-teal;
+$filter-border-outline-gray: 2px solid $filter-color-gray-outline;
+
+
+//icons Services
 
 $fields-color: #41a297;
 

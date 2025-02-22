@@ -387,55 +387,6 @@ body {
   word-wrap: break-word;
 }
 
-.pagination {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 83px 0 45px;
-  gap: 25px;
-}
-.pagination__button {
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-.pagination__button img {
-  width: 8px;
-  height: 13px;
-}
-.pagination__numbers {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 35px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.pagination__number {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
-  color: #343434;
-  position: relative;
-}
-.pagination__number--active {
-  opacity: 1;
-}
-.pagination__number--active::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 40px;
-  height: 40px;
-  background-color: #ebebeb;
-  border-radius: 50%;
-  z-index: -1;
-}
-
 @media (max-width: 1200px) {
   .services__container {
     width: 95%;
