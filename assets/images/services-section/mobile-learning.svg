@@ -1,0 +1,12 @@
+<svg width="85" height="85" viewBox="0 0 85 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group 14">
+<circle id="Ellipse 11" cx="42.5" cy="42.5" r="42.5" fill="#DCCE90"/>
+<g id="phone">
+<rect id="Rectangle 60" x="24.274" y="15.774" width="35.6792" height="53.1547" rx="6.18925" stroke="white" stroke-width="2.18444"/>
+<line id="Line 5" x1="36.6526" y1="20.1429" x2="47.5748" y2="20.1429" stroke="white" stroke-width="2.18444" stroke-linecap="round"/>
+<line id="Line 6" x1="23.9102" y1="24.5118" x2="61.0457" y2="24.5118" stroke="white" stroke-width="2.18444"/>
+<line id="Line 7" x1="23.182" y1="58.7347" x2="60.3175" y2="58.7347" stroke="white" stroke-width="2.18444"/>
+<circle id="Ellipse 7" cx="42.1139" cy="64.1958" r="2.91259" fill="white"/>
+</g>
+</g>
+</svg>

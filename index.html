@@ -11,7 +11,11 @@
     <header class="hero">
       <div class="hero__grid">
         <div class="hero__card hero__card--logo">
-          <img src="./assets/images/main-section/logo-on-white.svg" alt="eLearning Company Logo" class="hero__card-logo" />
+          <img
+            src="./assets/images/main-section/logo-on-white.svg"
+            alt="eLearning Company Logo"
+            class="hero__card-logo"
+          />
           <p class="hero__card-tagline">Taking Learning to the Next Level</p>
         </div>
         <div class="hero__card hero__card--services"><h2 class="hero__card-title">Services</h2></div>
@@ -26,43 +30,184 @@
         <div class="hero__card hero__card--packages"><h2 class="hero__card-title">eLearning Packages</h2></div>
         <div class="hero__card hero__card--extra"></div>
         <div class="hero__card hero__card--contact">
-          <img class="hero__contact-icon" src="./assets/images/main-section/contact-us-icon.svg" alt="Icon contact us" />
+          <img
+            class="hero__contact-icon"
+            src="./assets/images/main-section/contact-us-icon.svg"
+            alt="Icon contact us"
+          />
           <h2 class="hero__card-title">Contact us</h2>
         </div>
       </div>
-
     </header>
     <div class="stripe"></div>
     <!-- Bootstrap Navbar -->
-      <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-          <a class="navbar-brand" href="#">
-            <img src="./assets/images/main-section/logo-on-dark.svg" alt="eLearning Company Logo" />
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Instructional Design</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">eLearning Development</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">eLearning Price Quote</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">eLearning Packages</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="./assets/images/main-section/logo-on-dark.svg" alt="eLearning Company Logo" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Instructional Design</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">eLearning Development</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">eLearning Price Quote</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">eLearning Packages</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section class="services">
+        <div class="services__container">
+          <div class="services__line">
+            <div class="services__line-vertical"></div>
+            <div class="services__line-curve services__line-curve--left"></div>
+            <div class="services__line-horizontal"></div>
+            <div class="services__line-curve services__line-curve--right"></div>
+            <div class="services__line-circle"></div>
+          </div>
+          <h2 class="services__title">Services We Provide</h2>
+
+          <!-- Filter Block -->
+          <div class="services__filters filters">
+            <div class="filters__search">
+              <input type="text" class="filters__search-input" placeholder="Search" />
+              <img src="assets/images/services-section/loupe.svg" alt="Search" class="filters__search-icon" />
+            </div>
+
+            <!-- Type Filter -->
+            <div class="filters__type">
+              <span class="filters__type-text">Type</span>
+
+              <!-- Main Circle Button  -->
+              <span class="filters__type-circle filters__type-trigger">
+                <img src="assets/images/services-section/black-arrow-right.svg" alt="Check" />
+              </span>
+
+              <!-- Color Selection Panel (Hidden by Default) -->
+              <div class="filters__type-dropdown">
+                <div class="filters__type-options">
+                  <span class="filters__type-color filters__type-color--gray" data-color="#D9D9D9"></span>
+                  <span class="filters__type-color filters__type-color--gold" data-color="#E7D08C"></span>
+                  <span class="filters__type-color filters__type-color--teal" data-color="#3D948E"></span>
+                  <span class="filters__type-color filters__type-color--teal-outline" data-color="outline-teal"></span>
+                  <span class="filters__type-color filters__type-color--gray-outline" data-color="outline-gray"></span>
+                </div>
+
+                <button class="filters__type-close">
+                  <img src="assets/images/services-section/close.svg" alt="Close" />
+                </button>
+              </div>
+            </div>
+
+             <div class="filters__occupation">
+              <span class="filters__occupation-text">Occupation</span>
+              <div class="filters__occupation-dropdown">
+                <div class="filters__occupation-background">
+                  <span class="filters__occupation-value">All</span>
+                </div>
+                <img src="assets/images/services-section/arrow-down.svg" alt="Arrow" />
+              </div>
+            </div> 
+
+
+          </div>
+
+          <!-- Services Block -->
+          <div class="services__list">
+            <div class="service">
+              <img
+                src="assets/images/services-section/instructional-design.svg"
+                alt="Instructional Design"
+                class="service__icon"
+              />
+              <h3 class="service__title">Instructional Design</h3>
+              <div class="service__line"></div>
+              <p class="service__description">
+                We provide full-service instructional design consulting. From standalone lessons to the series of
+                courses, no job is too large or too small for us.
+              </p>
+            </div>
+
+            <div class="service">
+              <img
+                src="assets/images/services-section/elearning-development.svg"
+                alt="eLearning Development"
+                class="service__icon"
+              />
+              <h3 class="service__title">eLearning Development</h3>
+              <div class="service__line"></div>
+              <p class="service__description">
+                The eLearning products we create feature deep learner engagement and ensure high knowledge transfer.
+              </p>
+            </div>
+
+            <div class="service">
+              <img
+                src="assets/images/services-section/mobile-learning.svg"
+                alt="Mobile Learning"
+                class="service__icon"
+              />
+              <h3 class="service__title">Mobile Learning</h3>
+              <div class="service__line"></div>
+              <p class="service__description">
+                Let us help you take your learning process anywhere your business may take you. Any place, any time, any
+                device.
+              </p>
+            </div>
+
+            <div class="service">
+              <img
+                src="assets/images/services-section/instructor-led-training.svg"
+                alt="Instructor-led Training"
+                class="service__icon"
+              />
+              <h3 class="service__title">Instructor-led Training</h3>
+              <div class="service__line"></div>
+              <p class="service__description">
+                We are experts at developing a classroom curriculum that meets your business needs and exceeds even your
+                highest expectations.
+              </p>
+            </div>
+          </div>
+
+          <!-- Pagination -->
+          <div class="services__pagination pagination">
+            <button class="pagination__button pagination__button--prev">
+              <img src="assets/images/services-section/arrow-left.svg" alt="Previous" />
+            </button>
+            <ul class="pagination__numbers">
+              <li class="pagination__number pagination__number--active">1</li>
+              <li class="pagination__number">2</li>
+              <li class="pagination__number">3</li>
+              <li class="pagination__number pagination__number--hidden">4</li>
             </ul>
+            <button class="pagination__button pagination__button--next">
+              <img src="assets/images/services-section/arrow-right.svg" alt="Next" />
+            </button>
           </div>
         </div>
-      </nav>
+      </section>
+    </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/features/pagination.js"></script>
+    <script src="/features/filter.js"></script>
+    <script src="/features/slider.js"></script>
+    <script src="/features/chat.js"></script>
   </body>
 </html>
