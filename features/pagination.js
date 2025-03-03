@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const serviceIcons = document.querySelectorAll('.service__icon'); // Service section icons
   const serviceLines = document.querySelectorAll('.service__line'); // Under-title lines
 
+  
   let currentPage = 1; // Start at page 1
   const totalPages = 4; // Total number of pages
 

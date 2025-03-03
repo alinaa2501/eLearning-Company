@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>eLearning Company</title>
-    <link rel="stylesheet" href="/dist/styles.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- <link rel="stylesheet" href="/dist/styles.css" /> -->
+    <link rel="stylesheet" href="css/index.css" />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" /> -->
   </head>
   <body>
     <header class="hero">
@@ -41,7 +42,7 @@
     </header>
     <div class="stripe"></div>
     <!-- Bootstrap Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container">
         <a class="navbar-brand" href="#">
           <img src="./assets/images/main-section/logo-on-dark.svg" alt="eLearning Company Logo" />
@@ -69,18 +70,11 @@
           </ul>
         </div>
       </div>
-    </nav>
+    </nav> -->
 
     <main>
-      <section class="services">
-        <div class="services__container">
-          <div class="services__line">
-            <div class="services__line-vertical"></div>
-            <div class="services__line-curve services__line-curve--left"></div>
-            <div class="services__line-horizontal"></div>
-            <div class="services__line-curve services__line-curve--right"></div>
-            <div class="services__line-circle"></div>
-          </div>
+      <section class="container services">
+        <div class="wrapper services__wrapper">
           <h2 class="services__title">Services We Provide</h2>
 
           <!-- Filter Block -->
@@ -115,7 +109,7 @@
               </div>
             </div>
 
-             <div class="filters__occupation">
+            <div class="filters__occupation">
               <span class="filters__occupation-text">Occupation</span>
               <div class="filters__occupation-dropdown">
                 <div class="filters__occupation-background">
@@ -123,9 +117,7 @@
                 </div>
                 <img src="assets/images/services-section/arrow-down.svg" alt="Arrow" />
               </div>
-            </div> 
-
-
+            </div>
           </div>
 
           <!-- Services Block -->
@@ -137,7 +129,6 @@
                 class="service__icon"
               />
               <h3 class="service__title">Instructional Design</h3>
-              <div class="service__line"></div>
               <p class="service__description">
                 We provide full-service instructional design consulting. From standalone lessons to the series of
                 courses, no job is too large or too small for us.
@@ -151,7 +142,6 @@
                 class="service__icon"
               />
               <h3 class="service__title">eLearning Development</h3>
-              <div class="service__line"></div>
               <p class="service__description">
                 The eLearning products we create feature deep learner engagement and ensure high knowledge transfer.
               </p>
@@ -164,7 +154,6 @@
                 class="service__icon"
               />
               <h3 class="service__title">Mobile Learning</h3>
-              <div class="service__line"></div>
               <p class="service__description">
                 Let us help you take your learning process anywhere your business may take you. Any place, any time, any
                 device.
@@ -178,7 +167,6 @@
                 class="service__icon"
               />
               <h3 class="service__title">Instructor-led Training</h3>
-              <div class="service__line"></div>
               <p class="service__description">
                 We are experts at developing a classroom curriculum that meets your business needs and exceeds even your
                 highest expectations.
@@ -203,7 +191,70 @@
           </div>
         </div>
       </section>
+
+      <section class="container cta-section">
+        <div class="wrapper cta-section__wrapper">
+          <div class="top-line cta-section__top-line"></div>
+          <div class="cta-section__background"></div>
+          <div class="cta-section__content">
+            <h2 class="cta-section__title">WE DESIGN LEARNING.</h2>
+            <p class="cta-section__subtitle">What We Can Do For You?</p>
+            <button class="cta-section__button">Know more</button>
+          </div>
+          <div class="cta-section__image">
+            <img src="assets/images/cta-section/man.svg" alt="Businessman" class="cta-section__man" />
+          </div>
+        </div>
+      </section>
+
+      <!-- <section class="container instructional-design">
+        <div class="wrapper instructional-design__wrapper">
+          <div class="instructional-design__image-wrapper">
+            <h1 class="instructional-design__title">Instructional Design</h1>
+            <img
+              src="assets/images/inst-design-section/img-Instructional-Design.svg"
+              alt="Instructional Design Image"
+              class="instructional-design__image"
+            />
+          </div>
+
+          <div class="instructional-design__content">
+            <h2 class="instructional-design__heading">We know learning inside and out</h2>
+            <p class="instructional-design__text">
+              Our instructional design team will work hard to align your business goals with your learning objectives to
+              ensure the training supports your business strategies.
+            </p>
+            <ul class="instructional-design__list">
+              <li class="instructional-design__item">
+                <img
+                  src="assets/images/inst-design-section/check-mark.svg"
+                  alt="Check Mark"
+                  class="instructional-design__icon"
+                />
+                Each project requires a unique approach, and we are ready for the challenge
+              </li>
+              <li class="instructional-design__item">
+                <img
+                  src="assets/images/inst-design-section/check-mark.svg"
+                  alt="Check Mark"
+                  class="instructional-design__icon"
+                />
+                Our expertise in the training and development industry will make your project a success
+              </li>
+              <li class="instructional-design__item">
+                <img
+                  src="assets/images/inst-design-section/check-mark.svg"
+                  alt="Check Mark"
+                  class="instructional-design__icon"
+                />
+                Your goals and deadlines are our priority
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section> -->
     </main>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/features/pagination.js"></script>
     <script src="/features/filter.js"></script>

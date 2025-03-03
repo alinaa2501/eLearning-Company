@@ -1,30 +1,77 @@
-@use "variables" as *;
-
+@use 'variables' as *;
+@use 'mixins' as *;
 
 @font-face {
   font-family: $font-primary;
-  src: url('../assets/fonts/MuseoSansCyrl300.woff2') format('woff2'), url('../assets/fonts/MuseoSansCyrl300.woff') format('woff'),
+  src: url('../assets/fonts/MuseoSansCyrl300.woff2') format('woff2'),
+    url('../assets/fonts/MuseoSansCyrl300.woff') format('woff'),
     url('../assets/fonts/MuseoSansCyrl300.ttf') format('truetype');
   font-weight: 300;
 }
 
 @font-face {
   font-family: $font-primary;
-  src: url('../assets/fonts/MuseoSansCyrl500.woff2') format('woff2'), url('../assets/fonts/MuseoSansCyrl500.woff') format('woff'),
+  src: url('../assets/fonts/MuseoSansCyrl500.woff2') format('woff2'),
+    url('../assets/fonts/MuseoSansCyrl500.woff') format('woff'),
     url('../assets/fonts/MuseoSansCyrl500.ttf') format('truetype');
   font-weight: 500;
 }
 
-/* === Reset === */
-
-* {
+/* Normalization */
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 62.5%;
 }
 
 body {
   font-family: $font-primary;
   min-width: 320px;
   background: $white;
+}
+
+.container {
+  @include flex-center;
+  position: relative;
+  margin: o auto;
+  padding: 0 3rem;
+}
+
+.wrapper {
+  width: 115.8rem;
+  position: relative;
+
+  @media (min-width: 1921px) {
+    width: 146rem;
+  }
+
+  @media (max-width: 991.5px) {
+    width: 100%;
+    padding: 3rem 2rem !important;
+    border-bottom: none !important;
+    border-right: none !important;
+    border-left: none !important;
+
+    /* hide vertical line top */
+    &::before {
+      display: none;
+    }
+    /*hide circle*/
+
+    &::after {
+      display: none;
+    }
+    /* hide rounded top line*/
+    .top-line {
+      display: none;
+
+      /*hide circle*/
+      &::before {
+        display: none;
+      }
+    }
+  }
 }

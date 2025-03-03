@@ -1,76 +1,31 @@
 @use 'variables' as *;
 @use 'mixins' as *;
+@use 'global';
 
 .services {
-  padding: 65px 0px;
-  background-color: $white;
-  position: relative;
-  @include flex-center;
-  min-height: 100svh;
-  position: relative;
+  padding-top: 65px;
 
-  &__container {
-    max-width: 1160px;
-    width: 100%;
-    padding-left: 60px;
-    z-index: 2;
-    position: relative;
+  &__wrapper {
+    padding: 0 0 45px 60px;
+    @include border-box-first;
+    // position: relative;
+
+    &::before {
+      @include absolute-box;
+      top: 0px;
+      left: -1.5rem;
+    }
+
+    &::after {
+      content: '';
+      @include circle-size;
+      top: 1.7rem;
+      left: -1.3rem;
+    }
   }
 
   .services {
     position: relative;
-
-    &__line {
-      &-vertical {
-        position: absolute;
-        left: 0px;
-        top: 30px;
-        height: calc(100% - 80px);
-        width: 3px;
-        background-color: $primary-color;
-      }
-
-      &-horizontal {
-        position: absolute;
-        bottom: 0px;
-        left: 50px;
-        right: 50px;
-        height: 3px;
-        background-color: $primary-color;
-      }
-
-      &-curve {
-        position: absolute;
-        width: 50px;
-        height: 50px;
-
-        &--left {
-          bottom: 0px;
-          left: 0px;
-          border-bottom-left-radius: 20px;
-          border-bottom: 3px solid $primary-color;
-          border-left: 3px solid $primary-color;
-        }
-
-        &--right {
-          bottom: -47px;
-          right: 0px;
-          border-top-right-radius: 20px;
-          border-top: 3px solid $primary-color;
-          border-right: 3px solid $primary-color;
-        }
-      }
-
-      &-circle {
-        position: absolute;
-        left: -11px;
-        top: 30px;
-        width: 25px;
-        height: 25px;
-        background-color: $primary-color;
-        border-radius: 50%;
-      }
-    }
   }
 
   &__title {
@@ -185,11 +140,9 @@
     }
 
     &-close {
-      display: none; 
+      display: none;
       position: absolute;
-      left: calc(100% + 7px); 
-      top: 13%;
-      transform: translateY(-50%);
+      left: calc(100% + 7px);
       background: none;
       border: none;
       cursor: pointer;
@@ -206,17 +159,17 @@
       margin-right: 81px;
 
       .filters__type-close {
-        display: block; 
+        display: block;
       }
     }
 
     &-trigger.hidden {
-      opacity: 0; 
+      opacity: 0;
       pointer-events: none;
     }
 
     &-circle.selected {
-      background-color: var(--selected-color, $light-gray); 
+      background-color: var(--selected-color, $light-gray);
     }
   }
 
@@ -224,7 +177,8 @@
     @include flex-center;
     gap: 10px;
 
-    &-text {
+    &-text,
+    &-value {
       font-size: 16px;
       color: $dark-gray;
     }
@@ -269,23 +223,28 @@
     width: 68%;
   }
 
-  &__line {
-    max-width: 202px;
-    border: 2px solid $golden-sand;
-    margin-bottom: 15px;
-  }
+
 
   &__description {
     font-size: 14px;
     color: $services-text;
     margin-bottom: 0;
     word-wrap: break-word;
+    line-height: 1.5;
+
+    &::before {
+      content: '';
+      height: 3px;
+      background-color: $golden-sand;
+      display: flex;
+      margin-bottom: 15px;
+    }
   }
 }
 
 .pagination {
   @include flex-center;
-  margin: 83px 0 45px;
+  margin: 83px 0 10px;
   gap: 25px;
 
   &__button {
@@ -305,6 +264,7 @@
     list-style: none;
     padding: 0;
     margin: 0;
+    z-index: 1;
   }
 
   &__number {
@@ -314,6 +274,7 @@
     position: relative;
     display: none;
     cursor: pointer;
+    opacity: 0.2;
 
     &--visible {
       display: flex;
@@ -342,19 +303,22 @@
   }
 }
 
-@media (max-width: 1200px) {
-  .services {
-    &__container {
-      width: 95%;
-    }
-  }
+@media (min-width: 1921px) {
   .services__list {
-    gap: 30px;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 1200px) {
+  .services__list {
+    gap: 5px;
     justify-content: space-between;
 
     .service {
-      &__line {
-        width: 180px;
+      &__description {
+        &::before {
+          width: 90%;
+        }
       }
     }
   }
@@ -362,15 +326,8 @@
 
 @media (max-width: 991.5px) {
   .services {
-    padding: 30px 0px;
+    padding: 0px;
 
-    &__line {
-      display: none;
-    }
-
-    &__container {
-      padding: 0;
-    }
 
     &__title {
       padding: 30px 0px 35px;
@@ -387,10 +344,6 @@
         &__title {
           width: 130px;
         }
-
-        &__line {
-          width: 150px;
-        }
       }
     }
   }
@@ -402,6 +355,7 @@
       width: 85%;
       margin: 0 auto;
       text-align: center;
+      padding-top: 0;
     }
 
     &__filters {
@@ -422,8 +376,14 @@
         max-width: none;
         text-align: center;
 
-        &__line {
-          width: 250px;
+        .service {
+          &__description {
+            &::before {
+              width: 50%;
+              margin: 0 auto;
+              margin-bottom: 10px;
+            }
+          }
         }
       }
     }
@@ -434,10 +394,3 @@
   }
 }
 
-@media (max-width: 576px) {
-  .service {
-    &__line {
-      max-width: 180px;
-    }
-  }
-}
