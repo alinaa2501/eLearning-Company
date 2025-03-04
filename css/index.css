@@ -1412,4 +1412,112 @@ body {
   .why-choose-us__list {
     max-width: 100%;
   }
+}
+.contact {
+  background-color: #3d948c;
+  height: 73.7rem;
+}
+.contact__wrapper {
+  text-align: center;
+  color: #ffffff;
+  max-width: 71rem;
+}
+.contact__title {
+  font-size: 5rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+}
+.contact__subtitle {
+  font-size: 2rem;
+  margin-bottom: 6.2rem;
+}
+.contact__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.3rem;
+}
+.contact__input::-webkit-input-placeholder, .contact__textarea::-webkit-input-placeholder {
+  color: #ffffff;
+}
+.contact__input::-moz-placeholder, .contact__textarea::-moz-placeholder {
+  color: #ffffff;
+}
+.contact__input:-ms-input-placeholder, .contact__textarea:-ms-input-placeholder {
+  color: #ffffff;
+}
+.contact__input::-ms-input-placeholder, .contact__textarea::-ms-input-placeholder {
+  color: #ffffff;
+}
+.contact__input::placeholder, .contact__textarea::placeholder {
+  color: #ffffff;
+}
+.contact__input, .contact__textarea {
+  width: 100%;
+  padding: 1.8rem 3.5rem;
+  border-radius: 2.75rem;
+  border: none;
+  font-size: 1.6rem;
+  background-color: #41a297;
+}
+.contact__textarea {
+  height: 18.1rem;
+  font-size: 1.6rem;
+  font-family: "Museo Sans Cyr", sans-serif;
+  resize: none;
+}
+.contact__button {
+  width: 24rem;
+  margin: 57px auto 0;
+  padding: 16px 0;
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  border-radius: 2.75rem;
+}
+.contact__button:hover {
+  background: white;
+  color: #3d948e;
+}
+
+@media (min-width: 1921px) {
+  .contact__wrapper {
+    max-width: 100rem;
+  }
+}
+@media (max-width: 992px) {
+  .contact {
+    height: 68.7rem;
+  }
+  .contact__title {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+  .contact__subtitle {
+    font-size: 1.6rem;
+    margin-bottom: 3.2rem;
+  }
+  .contact__textarea {
+    height: 12.1rem;
+  }
+  .contact__button {
+    margin-top: 2.5rem;
+  }
+}
+@media (max-width: 576px) {
+  .contact {
+    height: 100vh;
+  }
+  .contact__title, .contact__subtitle {
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 3.5rem;
+  }
 }/*# sourceMappingURL=index.css.map */
