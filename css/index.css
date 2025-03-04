@@ -1520,4 +1520,106 @@ body {
     margin: 0 auto;
     padding-bottom: 3.5rem;
   }
+}
+.footer {
+  background-color: #414141;
+  color: #ccc;
+  padding: 66rem 0 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.footer__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20rem;
+  padding: 0;
+}
+.footer__branding {
+  max-width: 300px;
+  color: #929292;
+}
+.footer__logo {
+  max-width: 23.4rem;
+  margin-bottom: 0.05rem;
+}
+.footer__tagline {
+  font-size: 1.2rem;
+}
+.footer__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 150px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.footer__list {
+  list-style: none;
+  padding: 0;
+}
+.footer__item {
+  margin-bottom: 10px;
+}
+.footer__link {
+  color: #929292;
+  text-decoration: none;
+  font-size: 14px;
+}
+.footer__link:hover {
+  color: #fff;
+}
+.footer__contact-btn {
+  position: fixed;
+  bottom: 35px;
+  right: 38px;
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+}
+.footer__contact-btn img {
+  width: 8.5rem;
+}
+.footer__contact-btn:hover {
+  background-color: #00796b;
+}
+.footer__bottom {
+  text-align: center;
+  margin-top: 6.5rem;
+  background: #383838;
+  height: 7rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.footer__copyright {
+  font-size: 1.4rem;
+  color: #595959;
 }/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,99 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'global';
+
+.footer {
+  background-color: $background-footer;
+  color: #ccc;
+  padding: 66rem 0 0;
+  flex-direction: column;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20rem;
+    padding: 0;
+  }
+
+  &__branding {
+    max-width: 300px;
+    color: $text-color-footer;
+  }
+
+  &__logo {
+    max-width: 23.4rem;
+    margin-bottom: 0.05rem;
+  }
+
+  &__tagline {
+    font-size: $font-size-xxxs;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+    flex: 1;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+  }
+
+  &__item {
+    margin-bottom: 10px;
+  }
+
+  &__link {
+    color: $text-color-footer;
+    text-decoration: none;
+    font-size: 14px;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  &__contact-btn {
+    position: fixed;
+    bottom: 35px;
+    right: 38px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+
+    img {
+      width: 8.5rem;
+    }
+
+    &:hover {
+      background-color: #00796b;
+    }
+  }
+
+  &__bottom {
+    text-align: center;
+    margin-top: 6.5rem;
+    background: $background-copyright;
+    height: 7rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__copyright {
+    font-size: $font-size-xxs;
+    color: $text-color-copyright;
+  }
+}
+
+// @media (max-width: 1200px) {
+//   &__wrapper {
+//   }
+// }
