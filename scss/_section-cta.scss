@@ -3,8 +3,6 @@
 @use 'global';
 
 .cta-section {
-  margin-bottom: 55px;
-
   .wrapper {
     height: 68.4rem;
     padding: 5.5rem 5.8rem 6.6rem 0;
@@ -23,7 +21,7 @@
   /* add rounded top line*/
   &__top-line {
     position: absolute;
-    top: -2px;
+    top: -3px;
     right: -2.5px;
     width: 2rem;
     height: 50%;
@@ -84,7 +82,7 @@
     margin-top: 31px;
     width: 198px;
     height: 50px;
-    font-size: $font-size-s;
+    font-size: $font-size-sm;
     font-weight: 400;
     text-align: center;
     padding: 15px 40px;
@@ -229,7 +227,7 @@
     }
 
     &__subtitle {
-      font-size: $font-size-s + 0.5rem;
+      font-size: $font-size-s;
       margin-bottom: 2rem;
     }
 

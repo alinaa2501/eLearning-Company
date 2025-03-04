@@ -8,8 +8,8 @@
   &__wrapper {
     padding: 0 0 45px 60px;
     @include border-box-first;
-    // position: relative;
 
+    /* hide vertical line top */
     &::before {
       @include absolute-box;
       top: 0px;
@@ -329,6 +329,7 @@
     &__title {
       padding: 30px 0px 35px;
       margin-bottom: 0;
+      font-size: $font-size-l - 1rem;
     }
 
     &__list {
@@ -387,10 +388,5 @@
     &__pagination {
       margin: 40px 0px 20px;
     }
-  }
-}
-
-@media (max-width: 576px) {
-  .service {
   }
 }

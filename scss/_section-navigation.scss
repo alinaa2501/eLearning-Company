@@ -122,6 +122,12 @@
   }
 }
 
+@media (min-width: 1921px) {
+  .navbar__wrapper {
+    width: 146rem;
+  }
+}
+
 @media (max-width: 1200px) {
   .navbar {
     &__list {

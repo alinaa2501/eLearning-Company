@@ -3,25 +3,46 @@
 @use 'global';
 
 .instructional-design {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 53px 0px;
-  position: relative;
+  &__wrapper {
+    padding: 4rem 0 5.5rem 6rem;
+    display: flex;
+    justify-content: space-between;
+    @include border-box-first;
+
+    /* hide vertical line top */
+    &::before {
+      @include absolute-box;
+      top: -.4rem;
+      left: -2rem;
+    }
+
+    /*circle*/
+    &::after {
+      content: '';
+      @include circle-size;
+      top: 5.6rem;
+      left: -1.3rem;
+    }
+  }
+
+  /* add rounded top line*/
+  &__top-line {
+    position: absolute;
+    top: -.25rem;
+    left: -.3rem;
+    width: 2rem;
+    height: 5%;
+    border-left: 3px solid $primary-color;
+    border-top: 3px solid $primary-color;
+    border-top-left-radius: 2rem;
+  }
 
   &__title {
     color: $gray-title;
-    font-size: 50px;
+    font-size: $font-size-l;
     font-weight: 550;
-    margin-bottom: 35px;
+    margin-bottom: 3.5rem;
     text-align: center;
-  }
-
-  &__container {
-    @include flex-center;
-    gap: 40px;
-    max-width: 1160px;
-    width: 100%;
   }
 
   &__image-wrapper {
@@ -31,151 +52,95 @@
   }
 
   &__image {
-    width: 392px;
-    height: 392px;
+    width: 39.2rem;
+    height: 39.2rem;
   }
 
   &__content {
     flex: 1;
-    max-width: 600px;
-    padding-top: 135px;
+    max-width: 60rem;
+    padding-top: 13.2rem;
   }
 
   &__heading {
     color: $cta-text-color;
-    font-size: 30px;
+    font-size: $font-size-m;
     font-weight: 500;
-    margin-bottom: 30px;
+    margin-bottom: 3rem;
   }
 
   &__text {
     color: $cta-text-color;
-    font-size: 16px;
-    margin-bottom: 20px;
+    font-size: $font-size-xs;
+    margin-bottom: 2rem;
     line-height: 150%;
   }
 
   &__list {
     list-style: none;
     padding: 0;
-    max-width: 540px;
+    max-width: 50.4rem;
   }
 
   &__item {
     display: flex;
     align-items: center;
     color: $cta-text-color;
-    font-size: 16px;
-    margin-bottom: 21px;
+    font-size: $font-size-xs;
+    margin-bottom: 2.1rem;
   }
 
   &__icon {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1rem;
   }
 }
 
-// @media (max-width: 1200px) {
-//   .services {
-//     &__container {
-//       width: 95%;
-//     }
-//   }
-//   .services__list {
-//     gap: 30px;
-//     justify-content: space-between;
-
-
-//   }
-// }
-
-// @media (max-width: 991.5px) {
-//   .services {
-//     padding: 30px 0px;
-
-
-
-//     &__container {
-//       padding: 0;
-//     }
-
-//     &__title {
-//       padding: 30px 0px 35px;
-//       margin-bottom: 0;
-//     }
-
-//     &__list {
-//       justify-content: space-between;
-
-//       .service {
-//         max-width: 180px;
-//         min-width: 150px;
-
-//         &__title {
-//           width: 130px;
-//         }
-
-
-//       }
-//     }
-//   }
-// }
-
-@media (min-width: 768px) {
+@media (max-width: 992px) {
   .instructional-design {
-    padding: 15px 0;
-
-      &__container {
-    @include flex-center;
-    gap: 40px;
-    max-width: 1160px;
-    width: 100%;
-  }
-
-  &__image-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+    &__title {
+      font-size: $font-size-l - 1rem;
+    }
 
     &__image {
-      width: 250px;
-      height: 250px;
+      width: 29.2rem;
+      height: 29.2rem;
     }
 
     &__content {
-      padding-top: 0px;
-    }
-    &__text {
-      text-align: center;
-    }
-  }
-}
-
-@media (min-width: 320px) {
-  .instructional-design {
-    padding: 15px 0;
-
-    &__container {
-      width: 90%;
-      display: flex;
-      flex-direction: column;
+      padding-top: 8.2rem;
     }
 
-    &__image {
-      width: 250px;
-      height: 250px;
-    }
     &__heading {
-      text-align: center;
+      font-size: $font-size-s;
+    }
+
+    &__text,
+    &__item {
+      font-size: $font-size-xxs;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .instructional-design {
+    &__wrapper {
+      flex-direction: column;
+      align-items: center;
     }
 
     &__content {
-      padding-top: 0px;
+      padding-top: 3.5rem;
     }
+
+    &__heading,
     &__text {
       text-align: center;
+    }
+
+    &__list {
+      max-width: 100%;
     }
   }
 }
