@@ -2,26 +2,19 @@
 @use 'mixins' as *;
 @use 'global';
 
-.instructional-design {
+.why-choose-us {
   &__wrapper {
-    padding: 4rem 0 5.5rem 6rem;
+    padding: 5.6rem 5.8rem 9.4rem 0rem;
     display: flex;
     justify-content: space-between;
-    @include border-box-first;
+    border-right: 0.3rem solid $primary-color;
+    border-top-right-radius: 2rem;
 
     /* hide vertical line top */
     &::before {
       @include absolute-box;
       top: -0.4rem;
-      left: -2rem;
-    }
-
-    /*circle*/
-    &::after {
-      content: '';
-      @include circle-size;
-      top: 5.6rem;
-      left: -1.3rem;
+      right: -2rem;
     }
   }
 
@@ -29,37 +22,18 @@
   &__top-line {
     position: absolute;
     top: -0.25rem;
-    left: -0.3rem;
+    right: -0.29rem;
     width: 2rem;
     height: 5%;
-    border-left: 3px solid $primary-color;
+    border-right: 3px solid $primary-color;
     border-top: 3px solid $primary-color;
-    border-top-left-radius: 2rem;
-  }
-
-  &__title {
-    color: $gray-title;
-    font-size: $font-size-l;
-    font-weight: 550;
-    margin-bottom: 3.5rem;
-    text-align: center;
-  }
-
-  &__image-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  &__image {
-    width: 39.2rem;
-    height: 39.2rem;
+    border-top-right-radius: 2rem;
   }
 
   &__content {
     flex: 1;
     max-width: 60rem;
-    padding-top: 13.2rem;
+    padding-top: 2.6rem;
   }
 
   &__heading {
@@ -95,21 +69,27 @@
     height: 3rem;
     margin-right: 1rem;
   }
+
+  &__image-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__image {
+    width: 39.2rem;
+    height: 39.2rem;
+  }
 }
 
 @media (max-width: 992px) {
-  .instructional-design {
+  .why-choose-us {
     &__title {
       font-size: $font-size-l - 1rem;
     }
 
-    &__image {
-      width: 29.2rem;
-      height: 29.2rem;
-    }
-
     &__content {
-      padding-top: 8.2rem;
+      padding-top: 1.2rem;
     }
 
     &__heading {
@@ -120,18 +100,24 @@
     &__item {
       font-size: $font-size-xxs;
     }
+
+    &__image {
+      width: 29.2rem;
+      height: 29.2rem;
+    }
   }
 }
 
 @media (max-width: 768px) {
-  .instructional-design {
+  .why-choose-us {
     &__wrapper {
+      padding-top: 0 !important;
       flex-direction: column;
       align-items: center;
     }
 
     &__content {
-      padding-top: 3.5rem;
+      padding-top: 0;
     }
 
     &__heading,

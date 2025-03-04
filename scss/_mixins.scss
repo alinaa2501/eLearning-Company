@@ -1,6 +1,5 @@
 @use 'variables' as *;
 
-
 @mixin flex-center {
   display: flex;
   align-items: center;
@@ -36,14 +35,13 @@
 }
 
 @mixin border-box-first {
-  border-bottom: .3rem solid $primary-color;
-  border-left: .3rem solid $primary-color;
+  border-bottom: 0.3rem solid $primary-color;
+  border-left: 0.3rem solid $primary-color;
   border-bottom-left-radius: 2rem;
-
 }
 
 @mixin border-box-second {
-  border-bottom: .3rem solid $primary-color;
-  border-right: .3rem solid $primary-color;
+  border-bottom: 0.3rem solid $primary-color;
+  border-right: 0.3rem solid $primary-color;
   border-bottom-right-radius: 2rem;
 }
