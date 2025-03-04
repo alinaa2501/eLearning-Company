@@ -1,4 +1,4 @@
-// Type 
+// Type
 
 document.addEventListener('DOMContentLoaded', function () {
   const typeTrigger = document.querySelector('.filters__type-trigger');
@@ -60,15 +60,3 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
-
-
-
-
-
-
-
-
-
-
-
-

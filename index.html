@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>eLearning Company</title>
-    <link rel="stylesheet" href="/dist/styles.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- <link rel="stylesheet" href="/dist/styles.css" /> -->
+    <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
     <header class="hero">
@@ -40,47 +40,37 @@
       </div>
     </header>
     <div class="stripe"></div>
-    <!-- Bootstrap Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
-      <div class="container">
-        <a class="navbar-brand" href="#">
-          <img src="./assets/images/main-section/logo-on-dark.svg" alt="eLearning Company Logo" />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
+
+    <nav class="navbar container">
+      <div class="navbar__wrapper">
+        <div class="navbar__brand">
+          <img src="./assets/images/main-section/logo-on-dark.svg" alt="eLearning Company Logo" class="navbar__logo" />
+        </div>
+
+        <!-- Hamburger Button -->
+        <button class="navbar__toggler" id="navbar-toggler">
+          <span class="navbar__icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Instructional Design</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">eLearning Development</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">eLearning Price Quote</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">eLearning Packages</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+
+        <!-- Navigation Links -->
+        <div class="navbar__menu" id="navbar-menu">
+          <ul class="navbar__list">
+            <li class="navbar__item"><a href="#" class="navbar__link">Home</a></li>
+            <li class="navbar__item"><a href="#services" class="navbar__link">Services</a></li>
+            <li class="navbar__item"><a href="#" class="navbar__link">Instructional Design</a></li>
+            <li class="navbar__item"><a href="#cta-section" class="navbar__link">eLearning Development</a></li>
+            <li class="navbar__item"><a href="#" class="navbar__link">eLearning Price Quote</a></li>
+            <li class="navbar__item"><a href="#" class="navbar__link">eLearning Packages</a></li>
+            <li class="navbar__item"><a href="#contact" class="navbar__link">Contact</a></li>
           </ul>
         </div>
       </div>
     </nav>
 
     <main>
-      <section class="services">
-        <div class="services__container">
-          <div class="services__line">
-            <div class="services__line-vertical"></div>
-            <div class="services__line-curve services__line-curve--left"></div>
-            <div class="services__line-horizontal"></div>
-            <div class="services__line-curve services__line-curve--right"></div>
-            <div class="services__line-circle"></div>
-          </div>
+      <section class="container services" id="services">
+        <div class="wrapper services__wrapper">
+          <!-- <div class="top-line services__top-line"></div> -->
           <h2 class="services__title">Services We Provide</h2>
 
           <!-- Filter Block -->
@@ -115,7 +105,7 @@
               </div>
             </div>
 
-             <div class="filters__occupation">
+            <div class="filters__occupation">
               <span class="filters__occupation-text">Occupation</span>
               <div class="filters__occupation-dropdown">
                 <div class="filters__occupation-background">
@@ -123,9 +113,7 @@
                 </div>
                 <img src="assets/images/services-section/arrow-down.svg" alt="Arrow" />
               </div>
-            </div> 
-
-
+            </div>
           </div>
 
           <!-- Services Block -->
@@ -137,7 +125,7 @@
                 class="service__icon"
               />
               <h3 class="service__title">Instructional Design</h3>
-              <div class="service__line"></div>
+              <!-- <div class="service__line"></div> -->
               <p class="service__description">
                 We provide full-service instructional design consulting. From standalone lessons to the series of
                 courses, no job is too large or too small for us.
@@ -151,7 +139,7 @@
                 class="service__icon"
               />
               <h3 class="service__title">eLearning Development</h3>
-              <div class="service__line"></div>
+              <!-- <div class="service__line"></div> -->
               <p class="service__description">
                 The eLearning products we create feature deep learner engagement and ensure high knowledge transfer.
               </p>
@@ -164,7 +152,7 @@
                 class="service__icon"
               />
               <h3 class="service__title">Mobile Learning</h3>
-              <div class="service__line"></div>
+              <!-- <div class="service__line"></div> -->
               <p class="service__description">
                 Let us help you take your learning process anywhere your business may take you. Any place, any time, any
                 device.
@@ -178,7 +166,7 @@
                 class="service__icon"
               />
               <h3 class="service__title">Instructor-led Training</h3>
-              <div class="service__line"></div>
+              <!-- <div class="service__line"></div> -->
               <p class="service__description">
                 We are experts at developing a classroom curriculum that meets your business needs and exceeds even your
                 highest expectations.
@@ -203,8 +191,24 @@
           </div>
         </div>
       </section>
+
+      <section class="container cta-section" id="cta-section">
+        <div class="wrapper cta-section__wrapper">
+          <div class="top-line cta-section__top-line"></div>
+          <div class="cta-section__background"></div>
+          <div class="cta-section__content">
+            <h2 class="cta-section__title">WE DESIGN LEARNING.</h2>
+            <p class="cta-section__subtitle">What We Can Do For You?</p>
+            <button class="cta-section__button">Know more</button>
+          </div>
+          <div class="cta-section__image">
+            <img src="assets/images/cta-section/man.svg" alt="Businessman" class="cta-section__man" />
+          </div>
+        </div>
+      </section>
     </main>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="/features/toggle-mobile-menu.js"></script>
     <script src="/features/pagination.js"></script>
     <script src="/features/filter.js"></script>
     <script src="/features/slider.js"></script>
