@@ -3,17 +3,27 @@
 @use 'global';
 
 .footer {
-  background-color: $background-footer;
   color: #ccc;
-  padding: 66rem 0 0;
   flex-direction: column;
+  padding: 0;
+  // max-height: 31.4rem;
 
   &__wrapper {
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: $background-footer;
+    padding: 6rem 2rem 6.5rem;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__content {
+    gap: 20rem;
+    // padding: 0 2rem;
+    display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 20rem;
-    padding: 0;
   }
 
   &__branding {
@@ -32,9 +42,10 @@
 
   &__nav {
     display: flex;
-    justify-content: center;
-    gap: 150px;
+    justify-content: space-between;
+    // gap: 150px;
     flex: 1;
+    width: 72.4rem;
   }
 
   &__list {
@@ -56,8 +67,22 @@
     }
   }
 
+  &__bottom {
+    text-align: center;
+
+    background: $background-copyright;
+    height: 7rem;
+    width: 100%;
+    @include flex-center;
+    position: relative;
+  }
+
+  &__copyright {
+    font-size: $font-size-xxs;
+    color: $text-color-copyright;
+  }
+
   &__contact-btn {
-    position: fixed;
     bottom: 35px;
     right: 38px;
     width: 50px;
@@ -66,34 +91,51 @@
     align-items: center;
     justify-content: center;
     border-radius: 50%;
+    position: absolute;
 
     img {
       width: 8.5rem;
     }
-
-    &:hover {
-      background-color: #00796b;
-    }
-  }
-
-  &__bottom {
-    text-align: center;
-    margin-top: 6.5rem;
-    background: $background-copyright;
-    height: 7rem;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  &__copyright {
-    font-size: $font-size-xxs;
-    color: $text-color-copyright;
   }
 }
 
-// @media (max-width: 1200px) {
-//   &__wrapper {
-//   }
-// }
+@media (max-width: 1200px) {
+  .footer {
+    &__wrapper {
+      gap: 10rem;
+    }
+
+    &__logo {
+      width: 15rem;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .footer {
+    &__content {
+      flex-direction: column;
+      gap: 0em;
+      align-items: center;
+    }
+    &__branding {
+      padding-bottom: 3.5rem;
+    }
+
+    &__nav {
+      gap: 5rem;
+    }
+  }
+}
+
+@media (max-width: 769px) {
+  .footer {
+    &__nav {
+      flex-direction: column;
+      text-align: center;
+      gap: 3rem;
+          max-width: 32rem;
+
+    }
+  }
+}
