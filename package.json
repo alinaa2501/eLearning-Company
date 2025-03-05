@@ -5,8 +5,8 @@
   "type": "commonjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass --watch styles.scss:dist/styles.css",
-    "build:sass": "sass styles.scss dist/styles.css --watch"
+    "sass": "sass --watch styles.scss:css/styles.css",
+    "build:sass": "sass styles.scss css/styles.css --watch"
   },
   "repository": {
     "type": "git",
