@@ -1,0 +1,112 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'global';
+
+.contact {
+  background-color: $secondery-color;
+  height: 73.7rem;
+
+  &__wrapper {
+    text-align: center;
+    color: $white;
+    max-width: 71rem;
+  }
+
+  &__title {
+    font-size: $font-size-l;
+    font-weight: 600;
+    margin-bottom: 3rem;
+  }
+
+  &__subtitle {
+    font-size: $font-size-sm;
+    margin-bottom: 6.2rem;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 2.3rem;
+  }
+  &__input::placeholder,
+  &__textarea::placeholder {
+    color: $white;
+  }
+  &__input,
+  &__textarea {
+    width: 100%;
+    padding: 1.8rem 3.5rem;
+    border-radius: 2.75rem;
+    border: none;
+    font-size: $font-size-xs;
+    background-color: $fields-color;
+  }
+
+  &__textarea {
+    height: 18.1rem;
+    font-size: $font-size-xs;
+    font-family: $font-primary;
+    resize: none;
+  }
+
+  &__button {
+    width: 24rem;
+    margin: 57px auto 0;
+    padding: 16px 0;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    font-size: $font-size-sm;
+    cursor: pointer;
+    border-radius: 2.75rem;
+
+    &:hover {
+      background: white;
+      color: $primary-color;
+    }
+  }
+}
+
+@media (min-width: 1921px) {
+  .contact {
+    &__wrapper {
+      max-width: 100rem;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .contact {
+    height: 68.7rem;
+
+    &__title {
+      font-size: $font-size-m;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    &__subtitle {
+      font-size: $font-size-xs;
+      margin-bottom: 3.2rem;
+    }
+
+    &__textarea {
+      height: 12.1rem;
+    }
+
+    &__button {
+      margin-top: 2.5rem;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .contact {
+    &__title,
+    &__subtitle {
+      width: 80%;
+      margin: 0 auto;
+      padding-bottom: 3.5rem;
+    }
+  }
+}

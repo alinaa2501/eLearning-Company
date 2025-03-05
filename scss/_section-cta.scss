@@ -1,0 +1,243 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'global';
+
+.cta-section {
+  .wrapper {
+    height: 68.4rem;
+    padding: 5.5rem 5.8rem 6.6rem 0;
+    @include border-box-second;
+    @include flex(row, start, center);
+    position: relative;
+
+    /* hide vertical line top */
+    &::before {
+      @include absolute-box;
+      top: -3px;
+      right: -3px;
+    }
+  }
+
+  /* add rounded top line*/
+  &__top-line {
+    position: absolute;
+    top: -3px;
+    right: -2.5px;
+    width: 2rem;
+    height: 50%;
+    border-right: 3px solid $primary-color;
+    border-top: 3px solid $primary-color;
+    border-top-right-radius: 2rem;
+
+    /*circle on the line*/
+    &::before {
+      content: '';
+      @include circle-size;
+      bottom: -1rem;
+      right: -1.35rem;
+    }
+  }
+
+  &__background {
+    position: absolute;
+    background: url('../assets/images/cta-section/background.svg');
+    background-size: cover;
+    background-position: center;
+    height: calc(100% - 5.5rem - 6.6rem);
+    width: 130%;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    top: 5.5rem;
+    right: 5.8rem;
+  }
+
+  &__content {
+    max-width: 437px;
+    max-height: 100%;
+    position: relative;
+  }
+
+  &__title {
+    font-size: $font-size-xl;
+    font-weight: 600;
+    color: $cta-text-color;
+    line-height: 1.1;
+    margin-bottom: 0.9rem;
+  }
+
+  &__subtitle {
+    font-size: $font-size-m + 0.5rem;
+    color: $cta-text-color;
+    font-weight: 100;
+    margin: 0;
+    line-height: 1;
+    letter-spacing: -2px;
+  }
+
+  &__button {
+    border: none;
+    @include flex-center;
+    background: $secondery-color;
+    color: $white;
+    margin-top: 31px;
+    width: 198px;
+    height: 50px;
+    font-size: $font-size-sm;
+    font-weight: 400;
+    text-align: center;
+    padding: 15px 40px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out;
+
+    &:hover {
+      background: darken($secondery-color, 10%);
+    }
+  }
+
+  &__image {
+    position: absolute;
+    right: 17.3rem;
+    bottom: 6.5rem;
+    max-width: 31.1rem;
+
+    &::after {
+      content: '';
+      width: 95.8rem;
+      left: -67.1rem;
+      height: 1.1rem;
+      background: $primary-color;
+      position: absolute;
+      bottom: -0.9rem;
+    }
+  }
+}
+
+@media (min-width: 1921px) {
+  .cta-section {
+    &__background {
+      width: 150%;
+    }
+
+    &__image {
+      position: absolute;
+
+      &::after {
+        content: '';
+        width: 126.3rem;
+        left: -97.4rem;
+        height: 1.1rem;
+        background: $primary-color;
+        position: absolute;
+        bottom: -0.9rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 2440px) {
+  .cta-section {
+    &__background {
+      width: 350%;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .cta-section {
+    padding: 0px;
+
+    .wrapper {
+      margin: 0;
+      height: 55rem;
+
+      /*line under block*/
+      &::after {
+        content: '';
+        width: 100%;
+        left: 0;
+        height: 1.1rem;
+        background: $primary-color;
+        position: absolute;
+        bottom: -0.9rem;
+      }
+    }
+
+    &__background {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      top: 0rem;
+      right: 0rem;
+      height: 100%;
+      width: 100%;
+    }
+
+    &__title {
+      font-size: $font-size-xl - 1rem;
+    }
+
+    &__image {
+      right: 2rem;
+      bottom: -0.2rem;
+
+      /*hide the line*/
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .cta-section {
+    .wrapper {
+      height: 45rem;
+    }
+
+    &__title {
+      font-size: $font-size-l + 0.5rem;
+    }
+
+    &__subtitle {
+      font-size: $font-size-m;
+    }
+
+    &__image {
+      img {
+        width: 25rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .cta-section {
+    .wrapper {
+      height: 69rem;
+      @include flex(column, start, center);
+    }
+
+    &__content {
+      width: 31.5rem;
+      @include flex(column, center, center);
+    }
+
+    &__title {
+      text-align: center;
+    }
+
+    &__subtitle {
+      font-size: $font-size-s;
+      margin-bottom: 2rem;
+    }
+
+    &__button {
+      margin: 0;
+    }
+
+    &__image {
+      right: 50%;
+      transform: translateX(50%);
+    }
+  }
+}

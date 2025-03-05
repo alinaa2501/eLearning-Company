@@ -1,0 +1,132 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'global';
+
+.why-choose-us {
+  &__wrapper {
+    padding: 5.6rem 5.8rem 9.4rem 0rem;
+    display: flex;
+    justify-content: space-between;
+    border-right: 0.3rem solid $primary-color;
+    border-top-right-radius: 2rem;
+
+    /* hide vertical line top */
+    &::before {
+      @include absolute-box;
+      top: -3px;
+      right: -3px;
+    }
+  }
+
+  /* add rounded top line*/
+  &__top-line {
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    width: 2rem;
+    height: 2rem;
+    border-right: 3px solid $primary-color;
+    border-top: 3px solid $primary-color;
+    border-top-right-radius: 2rem;
+  }
+
+  &__content {
+    flex: 1;
+    max-width: 60rem;
+    padding-top: 2.6rem;
+  }
+
+  &__heading {
+    color: $cta-text-color;
+    font-size: $font-size-m;
+    font-weight: 500;
+    margin-bottom: 3rem;
+  }
+
+  &__text {
+    color: $cta-text-color;
+    font-size: $font-size-xs;
+    margin-bottom: 4.1rem;
+    line-height: 150%;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    max-width: 50.4rem;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    color: $cta-text-color;
+    font-size: $font-size-xs;
+    margin-bottom: 2.1rem;
+  }
+
+  &__check-mark {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1rem;
+  }
+
+  &__image-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__image {
+    width: 39.2rem;
+    height: 39.2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .why-choose-us {
+    &__title {
+      font-size: $font-size-l - 1rem;
+    }
+
+    &__content {
+      padding-top: 1.2rem;
+    }
+
+    &__heading {
+      font-size: $font-size-s;
+    }
+
+    &__text,
+    &__item {
+      font-size: $font-size-xxs;
+    }
+
+    &__image {
+      width: 29.2rem;
+      height: 29.2rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .why-choose-us {
+    &__wrapper {
+      padding-top: 0 !important;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__content {
+      padding-top: 0;
+    }
+
+    &__heading,
+    &__text {
+      text-align: center;
+    }
+
+    &__list {
+      max-width: 100%;
+    }
+  }
+}

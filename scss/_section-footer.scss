@@ -1,0 +1,139 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'global';
+
+.footer {
+  color: #ccc;
+  flex-direction: column;
+  padding: 0;
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: $background-footer;
+    padding: 6rem 2rem 6.5rem;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__content {
+    gap: 20rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__branding {
+    max-width: 300px;
+    color: $text-color-footer;
+  }
+
+  &__logo {
+    max-width: 23.4rem;
+    margin-bottom: 0.05rem;
+  }
+
+  &__tagline {
+    font-size: $font-size-xxxs;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    width: 72.4rem;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+  }
+
+  &__item {
+    margin-bottom: 10px;
+  }
+
+  &__link {
+    color: $text-color-footer;
+    text-decoration: none;
+    font-size: 14px;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  &__bottom {
+    text-align: center;
+
+    background: $background-copyright;
+    height: 7rem;
+    width: 100%;
+    @include flex-center;
+    position: relative;
+  }
+
+  &__copyright {
+    font-size: $font-size-xxs;
+    color: $text-color-copyright;
+  }
+
+  &__contact-btn {
+    bottom: 3.5rem;
+    right: 3.5rem;
+    width: 4.5rem;
+    height: 4.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: absolute;
+    cursor: pointer;
+
+    img {
+      width: 8.5rem;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .footer {
+    &__wrapper {
+      gap: 10rem;
+    }
+
+    &__logo {
+      width: 15rem;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .footer {
+    &__content {
+      flex-direction: column;
+      gap: 0em;
+      align-items: center;
+    }
+    &__branding {
+      padding-bottom: 3.5rem;
+    }
+
+    &__nav {
+      gap: 5rem;
+    }
+  }
+}
+
+@media (max-width: 769px) {
+  .footer {
+    &__nav {
+      flex-direction: column;
+      text-align: center;
+      gap: 3rem;
+          max-width: 32rem;
+
+    }
+  }
+}

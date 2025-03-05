@@ -2,7 +2,7 @@
 $primary-color: #3d948e;
 $secondery-color: #3d948c; //button and contact-page background
 $text-color: #333;
-$dark-gray: #343434; //text with logo in hero, background navbar and line(10%), background-menu-footer
+$dark-gray: #343434; //text with logo in hero, background navbar and line(10%)
 $white: #ffffff;
 $gray-title: #999b9a;
 
@@ -14,25 +14,40 @@ $gray-muted: #b5b7b6;
 $golden-sand: #dcce90;
 $teal-aqua: #29b4ad;
 
-// Type Filter Colors 
-$filter-color-gray: #D9D9D9; 
-$filter-color-gold: #E7D08C; 
-$filter-color-teal: #3D948E; 
-$filter-color-teal-outline: #3D948E; 
-$filter-color-gray-outline: $gray-muted; 
+// Type Filter Colors
+$filter-color-gray: #d9d9d9;
+$filter-color-gold: #e7d08c;
+$filter-color-teal: #3d948e;
+$filter-color-teal-outline: #3d948e;
+$filter-color-gray-outline: $gray-muted;
 // Background & Borders
-$filter-background: $light-gray; 
+$filter-background: $light-gray;
 $filter-border-outline-teal: 2px solid $filter-color-teal;
 $filter-border-outline-gray: 2px solid $filter-color-gray-outline;
 
+// === CTA-Section ===
+$cta-text-color: #424242;
 
-//icons Services
-
+// === Contact Section ===
 $fields-color: #41a297;
 
+// === Footer Section ===
 $text-color-footer: #929292;
+$background-footer: #414141;
 $text-color-copyright: #595959;
 $background-copyright: #383838;
 
+// === Contact Section ===
+
 // Typography
 $font-primary: 'Museo Sans Cyr', sans-serif;
+
+$font-size-xxl: 9rem;
+$font-size-xl: 7.5rem;
+$font-size-l: 5rem;
+$font-size-m: 3rem;
+$font-size-s: 2.5rem;
+$font-size-sm: 2rem;
+$font-size-xs: 1.6rem;
+$font-size-xxs: 1.4rem;
+$font-size-xxxs: 1.2rem;
