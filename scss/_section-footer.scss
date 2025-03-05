@@ -6,7 +6,6 @@
   color: #ccc;
   flex-direction: column;
   padding: 0;
-  // max-height: 31.4rem;
 
   &__wrapper {
     display: flex;
@@ -20,7 +19,6 @@
 
   &__content {
     gap: 20rem;
-    // padding: 0 2rem;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -43,7 +41,6 @@
   &__nav {
     display: flex;
     justify-content: space-between;
-    // gap: 150px;
     flex: 1;
     width: 72.4rem;
   }
@@ -83,15 +80,16 @@
   }
 
   &__contact-btn {
-    bottom: 35px;
-    right: 38px;
-    width: 50px;
-    height: 50px;
+    bottom: 3.5rem;
+    right: 3.5rem;
+    width: 4.5rem;
+    height: 4.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
     position: absolute;
+    cursor: pointer;
 
     img {
       width: 8.5rem;

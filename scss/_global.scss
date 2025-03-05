@@ -36,7 +36,6 @@ body {
 .container {
   @include flex-center;
   position: relative;
-  // margin: o auto;
   padding: 0 3rem;
 
   @media (max-width: 992px) {
