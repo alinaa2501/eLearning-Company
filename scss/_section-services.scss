@@ -173,7 +173,7 @@
     }
   }
 
-  &__occupation {
+&__occupation {
     @include flex-center;
     gap: 10px;
 
@@ -202,7 +202,8 @@
 
 .services__list {
   display: flex;
-  gap: 97px;
+  justify-content: space-between;
+  gap: 90px;
   max-width: 100%;
 }
 

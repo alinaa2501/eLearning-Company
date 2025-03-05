@@ -13,8 +13,8 @@
     /* hide vertical line top */
     &::before {
       @include absolute-box;
-      top: -2.9px;
-      right: -19px;
+      top: -3px;
+      right: -3px;
     }
   }
 
