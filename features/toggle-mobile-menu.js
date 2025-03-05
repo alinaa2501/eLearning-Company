@@ -1,16 +1,24 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const toggler = document.getElementById('navbar-toggler');
-  const menu = document.getElementById('navbar-menu');
-  const navbar = document.querySelector('.navbar');
-  const s = document.querySelectorAll('.navbar__link');
-  console.log(s);
+const toggler = document.getElementById("navbar-toggler");
+const menu = document.getElementById("navbar-menu");
+const navbar = document.querySelector(".navbar");
 
-  s.forEach(el => {
-    el.addEventListener('click', () => {
-      navbar.classList.toggle('navbar--active');
-    });
-  });
-  toggler.addEventListener('click', () => {
-    navbar.classList.toggle('navbar--active');
-  });
-});
+function toggleNavbar() {
+  navbar.classList.toggle("navbar--active");
+}
+
+function handleNavbarClick(event) {
+  if (event.target.classList.contains("navbar__link")) {
+    toggleNavbar();
+  }
+}
+
+function addEventListeners() {
+  toggler.addEventListener("click", toggleNavbar);
+  navbar.addEventListener("click", handleNavbarClick);
+}
+
+function init() {
+  addEventListeners();
+}
+
+init();

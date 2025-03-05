@@ -233,9 +233,9 @@
     &::before {
       content: '';
       height: 3px;
-      background-color: $golden-sand;
       display: flex;
       margin-bottom: 15px;
+      background-color: var(--before-color, $golden-sand);
     }
   }
 }

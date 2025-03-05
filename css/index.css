@@ -709,11 +709,11 @@ body {
 .service__description::before {
   content: "";
   height: 3px;
-  background-color: #dcce90;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 15px;
+  background-color: var(--before-color, #dcce90);
 }
 
 .pagination {
